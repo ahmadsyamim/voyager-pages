@@ -68,11 +68,6 @@ class PagesServiceProvider extends ServiceProvider
     {
         // Load migrations
         $this->loadMigrationsFrom(self::PACKAGE_DIR . 'database/migrations');
-
-        // Locate our factories for testing
-        $this->app->make('Illuminate\Database\Eloquent\Factory')->load(
-            self::PACKAGE_DIR . 'database/factories'
-        );
     }
 
     /**
